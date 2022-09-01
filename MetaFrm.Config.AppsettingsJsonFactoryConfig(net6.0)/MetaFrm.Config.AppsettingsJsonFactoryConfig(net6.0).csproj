@@ -13,8 +13,8 @@
     <Authors>dsun</Authors>
     <Company>Meta Framework</Company>
     <Copyright>Copyright 2022. dsun all rights reserved.</Copyright>
-    <PackageProjectUrl>https://github.com/dsuny/MetaFrm.Config.AppsettingsJsonFactoryConfig</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/dsuny/MetaFrm.Config.AppsettingsJsonFactoryConfig</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/MetaFrm/MetaFrm.Config.AppsettingsJsonFactoryConfig</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/MetaFrm/MetaFrm.Config.AppsettingsJsonFactoryConfig</RepositoryUrl>
     <PackageTags>meta;framework;dotnet;maui;</PackageTags>
 	
 	<SourceRevisionId>build$([System.DateTime]::UtcNow.ToString("yyyy-MM-ddTHH:mm:ss:fffZ"))</SourceRevisionId>
@@ -40,7 +40,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="MetaFrm.Core.net6.0" Version="6.0.0" />
+    <PackageReference Include="MetaFrm.Core.net6.0" Version="6.0.0.3" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
   </ItemGroup>
 
