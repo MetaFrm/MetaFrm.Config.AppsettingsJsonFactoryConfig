@@ -25,13 +25,28 @@ namespace MetaFrm.Config
         {
             return (this as IFactoryConfig).GetAttribute($"{core.GetType().FullName}", attributeName);
         }
+        string IFactoryConfig.GetAttribute<T>(ICore core, string attributeName)
+        {
+            Type type = core.GetType();
+
+            return (this as IFactoryConfig).GetAttribute($"{type.Namespace}.{type.Name}" + "[{0}]", attributeName);
+        }
 
         List<string> IFactoryConfig.GetAttribute(ICore core, List<string> listAttributeName)
         {
             List<string> vs = new();
 
             foreach (var attribute in listAttributeName)
-                vs.Add((this as IFactoryConfig).GetAttribute($"{core.GetType().FullName}", attribute));
+                vs.Add((this as IFactoryConfig).GetAttribute(core, attribute));
+
+            return vs;
+        }
+        List<string> IFactoryConfig.GetAttribute<T>(ICore core, List<string> listAttributeName)
+        {
+            List<string> vs = new();
+
+            foreach (var attribute in listAttributeName)
+                vs.Add((this as IFactoryConfig).GetAttribute<T>(core, attribute));
 
             return vs;
         }
