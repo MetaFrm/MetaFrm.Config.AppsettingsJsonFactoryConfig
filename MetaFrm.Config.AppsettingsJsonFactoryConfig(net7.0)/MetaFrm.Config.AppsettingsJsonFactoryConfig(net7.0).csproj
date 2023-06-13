@@ -8,7 +8,7 @@
     <AssemblyName>MetaFrm.Config.AppsettingsJsonFactoryConfig</AssemblyName>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <PackageId>MetaFrm.Config.AppsettingsJsonFactoryConfig.net6.0</PackageId>
+    <PackageId>MetaFrm.Config.AppsettingsJsonFactoryConfig.net7.0</PackageId>
     <Version>7.0.0.0</Version>
     <Authors>dsun</Authors>
     <Company>Meta Framework</Company>
