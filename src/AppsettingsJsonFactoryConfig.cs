@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using MetaFrm.Extensions;
+using Microsoft.Extensions.Configuration;
 
 namespace MetaFrm.Config
 {
@@ -54,32 +55,12 @@ namespace MetaFrm.Config
         string IFactoryConfig.GetAttribute(string namespaceName, string attributeName)
         {
             //await Task.Run(() => { });
-            return GetValue($"{namespaceName}.{attributeName}") ?? "";
+            return configuration.GetValue($"{namespaceName}.{attributeName}") ?? "";
         }
 
         string IFactoryConfig.GetPath(string namespaceName)
         {
-            return GetValue($"{namespaceName}.Path") ?? "";
-        }
-
-        private string? GetValue(string attributeName)
-        {
-            IConfigurationSection? configurationSection;
-            string[] vs;
-
-            configurationSection = null;
-            vs = attributeName.Split('.');
-
-            foreach (string v in vs)
-                if (configurationSection == null)
-                    configurationSection = configuration.GetSection(v);
-                else
-                    configurationSection = configurationSection.GetSection(v);
-
-            if (configurationSection == null)
-                return null;
-            else
-                return configurationSection.Value;
+            return configuration.GetValue($"{namespaceName}.Path") ?? "";
         }
     }
 }
