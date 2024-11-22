@@ -22,9 +22,20 @@ namespace MetaFrm.Config
             this.configuration = builder1.Build();
         }
 
+
+        Task<string> IFactoryConfig.GetAttributeAsync(ICore core, string attributeName)
+        {
+            throw new NotImplementedException();
+        }
         string IFactoryConfig.GetAttribute(ICore core, string attributeName)
         {
             return (this as IFactoryConfig).GetAttribute($"{core.GetType().FullName}", attributeName);
+        }
+
+
+        Task<string> IFactoryConfig.GetAttributeAsync<T>(ICore core, string attributeName)
+        {
+            throw new NotImplementedException();
         }
         string IFactoryConfig.GetAttribute<T>(ICore core, string attributeName)
         {
@@ -33,6 +44,11 @@ namespace MetaFrm.Config
             return (this as IFactoryConfig).GetAttribute($"{type.Namespace}.{type.Name}" + "[{0}]", attributeName);
         }
 
+
+        Task<List<string>> IFactoryConfig.GetAttributeAsync(ICore core, List<string> listAttributeName)
+        {
+            throw new NotImplementedException();
+        }
         List<string> IFactoryConfig.GetAttribute(ICore core, List<string> listAttributeName)
         {
             List<string> vs = new();
@@ -41,6 +57,12 @@ namespace MetaFrm.Config
                 vs.Add((this as IFactoryConfig).GetAttribute(core, attribute));
 
             return vs;
+        }
+
+
+        Task<List<string>> IFactoryConfig.GetAttributeAsync<T>(ICore core, List<string> listAttributeName)
+        {
+            throw new NotImplementedException();
         }
         List<string> IFactoryConfig.GetAttribute<T>(ICore core, List<string> listAttributeName)
         {
@@ -52,11 +74,17 @@ namespace MetaFrm.Config
             return vs;
         }
 
+
+        Task<string> IFactoryConfig.GetAttributeAsync(string namespaceName, string attributeName)
+        {
+            throw new NotImplementedException();
+        }
         string IFactoryConfig.GetAttribute(string namespaceName, string attributeName)
         {
             //await Task.Run(() => { });
             return configuration.GetValue($"{namespaceName}.{attributeName}") ?? "";
         }
+
 
         string IFactoryConfig.GetPath(string namespaceName)
         {
