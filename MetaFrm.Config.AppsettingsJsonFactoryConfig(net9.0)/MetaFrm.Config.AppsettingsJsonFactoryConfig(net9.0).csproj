@@ -1,14 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
     <RootNamespace>MetaFrm.Config</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <AssemblyName>MetaFrm.Config.AppsettingsJsonFactoryConfig</AssemblyName>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <PackageId>MetaFrm.Config.AppsettingsJsonFactoryConfig.net7.0</PackageId>
-    <Version>7.0.3.44</Version>
+    <PackageId>MetaFrm.Config.AppsettingsJsonFactoryConfig.net9.0</PackageId>
+    <Version>9.0.4.1</Version>
     <Authors>dsun</Authors>
     <Company>Meta Framework</Company>
     <Copyright>Copyright 2024. dsun all rights reserved.</Copyright>
@@ -30,8 +30,8 @@
     <Content Include="icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="MetaFrm.Core.net7.0" Version="7.0.3.44" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.1" />
+    <PackageReference Include="MetaFrm.Core.net9.0" Version="9.0.4.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.0" />
   </ItemGroup>
   <ItemGroup>
     <None Update="icon.png">
