@@ -51,7 +51,7 @@ namespace MetaFrm.Config
         }
         List<string> IFactoryConfig.GetAttribute(ICore core, List<string> listAttributeName)
         {
-            List<string> vs = new();
+            List<string> vs = [];
 
             foreach (var attribute in listAttributeName)
                 vs.Add((this as IFactoryConfig).GetAttribute(core, attribute));
@@ -66,7 +66,7 @@ namespace MetaFrm.Config
         }
         List<string> IFactoryConfig.GetAttribute<T>(ICore core, List<string> listAttributeName)
         {
-            List<string> vs = new();
+            List<string> vs = [];
 
             foreach (var attribute in listAttributeName)
                 vs.Add((this as IFactoryConfig).GetAttribute<T>(core, attribute));
@@ -81,7 +81,6 @@ namespace MetaFrm.Config
         }
         string IFactoryConfig.GetAttribute(string namespaceName, string attributeName)
         {
-            //await Task.Run(() => { });
             return configuration.GetValue($"{namespaceName}.{attributeName}") ?? "";
         }
 
