@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
-VisualStudioVersion = 18.0.11205.157 d18.0
+VisualStudioVersion = 18.0.11205.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A04B5B9A-8490-41B4-84F7-603FE7432434}"
 	ProjectSection(SolutionItems) = preProject
@@ -13,8 +13,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{B122C154-6285-4E68-8DE7-489B413201A3}"
 	ProjectSection(SolutionItems) = preProject
 		.github\workflows\build_10.0.yml = .github\workflows\build_10.0.yml
-		.github\workflows\build_8.0.yml = .github\workflows\build_8.0.yml
-		.github\workflows\build_9.0.yml = .github\workflows\build_9.0.yml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "솔루션 항목", "솔루션 항목", "{304A4FA2-3774-43E4-8CAB-7CC71F2C5AE2}"
@@ -24,10 +22,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "솔루션 항목", "솔루�
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MetaFrm.Config.AppsettingsJsonFactoryConfig(net8.0)", "MetaFrm.Config.AppsettingsJsonFactoryConfig(net8.0)\MetaFrm.Config.AppsettingsJsonFactoryConfig(net8.0).csproj", "{B84EF38F-EA03-4B65-8512-673C64EE02E5}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetaFrm.Config.AppsettingsJsonFactoryConfig(net9.0)", "MetaFrm.Config.AppsettingsJsonFactoryConfig(net9.0)\MetaFrm.Config.AppsettingsJsonFactoryConfig(net9.0).csproj", "{1DEED561-D462-45AD-A1C8-49236A892667}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetaFrm.Config.AppsettingsJsonFactoryConfig(net10.0)", "MetaFrm.Config.AppsettingsJsonFactoryConfig(net10.0)\MetaFrm.Config.AppsettingsJsonFactoryConfig(net10.0).csproj", "{C3CC7AA8-A125-472E-AB11-1E05328F09E3}"
 EndProject
 Global
@@ -36,14 +30,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B84EF38F-EA03-4B65-8512-673C64EE02E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B84EF38F-EA03-4B65-8512-673C64EE02E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B84EF38F-EA03-4B65-8512-673C64EE02E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B84EF38F-EA03-4B65-8512-673C64EE02E5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1DEED561-D462-45AD-A1C8-49236A892667}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1DEED561-D462-45AD-A1C8-49236A892667}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1DEED561-D462-45AD-A1C8-49236A892667}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1DEED561-D462-45AD-A1C8-49236A892667}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C3CC7AA8-A125-472E-AB11-1E05328F09E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C3CC7AA8-A125-472E-AB11-1E05328F09E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3CC7AA8-A125-472E-AB11-1E05328F09E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
